@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Lookups.WebAPI.xml</DocumentationFile>
+    <DocumentationFile>Orders.WebAPI.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

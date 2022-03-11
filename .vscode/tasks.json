@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Lookups.WebAPI/Lookups.WebAPI.csproj"
+                "${workspaceFolder}/Orders.WebAPI/Lookups.WebAPI.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Lookups.WebAPI/Lookups.WebAPI.csproj"
+                "${workspaceFolder}/Orders.WebAPI/Lookups.WebAPI.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -28,7 +28,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/Lookups.WebAPI/Lookups.WebAPI.csproj"
+                "${workspaceFolder}/Prders.WebAPI/Lookups.WebAPI.csproj"
             ],
             "problemMatcher": "$tsc"
         }
