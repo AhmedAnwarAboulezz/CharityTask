@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Orders.Service.Services
 {
@@ -81,6 +83,36 @@ namespace Orders.Service.Services
             if (product == null) return null;
             await UnitOfWork.GetRepository<Product>().RemoveAsync(product);
             await UnitOfWork.SaveChangesAsync();
+            return null;
+        }
+
+
+        public async Task<string> DecreaseRemainInStock(Guid productId)
+        {
+            var product = await UnitOfWork.GetRepository<Product>().GetAsync(productId);
+            if (product != null && product.RemainAmountInStock > 0) 
+            { 
+                product.RemainAmountInStock--; 
+                await UnitOfWork.SaveChangesAsync();
+            }
+            else return OrdersLocalize["ProductService_IsNotExists"];
+            return null;
+        }
+
+
+        public async Task<string> ResetRemainInStock(List<ProductResetDto> productResets)
+        {
+            var products = await UnitOfWork.GetRepository<Product>().FindAsync(a => productResets.Select(r=>r.Id).Contains(a.Id));
+            if (products.Any())
+            {
+                products.ToList().ForEach(product =>
+                {
+                    var itemReset = productResets.First(a => a.Id == product.Id);
+                    product.RemainAmountInStock = (product.RemainAmountInStock + itemReset.AddedAmount) > product.RemainAmountInStock ? product.RemainAmountInStock : (product.RemainAmountInStock + itemReset.AddedAmount);
+                });
+                await UnitOfWork.SaveChangesAsync();
+            }
+            else return OrdersLocalize["ProductService_IsNotExists"];
             return null;
         }
 

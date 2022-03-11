@@ -96,6 +96,13 @@
             <param name="id">PK Column Id</param>
             <returns></returns>
         </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.DecreaseRemainInStock(System.Guid)">
+            <summary>
+            Decrease Remain In Stock
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
         <member name="T:Orders.WebAPI.Program">
             <summary>
             

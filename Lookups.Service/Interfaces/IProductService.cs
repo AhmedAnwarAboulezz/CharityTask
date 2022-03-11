@@ -16,5 +16,6 @@ namespace Orders.Service.Interfaces
         Task<string> Add(ProductDto productDto);
         Task<string> Update(ProductDto productDto);
         Task<string> Delete(Guid id);
+        Task<string> DecreaseRemainInStock(Guid productId);
     }
 }

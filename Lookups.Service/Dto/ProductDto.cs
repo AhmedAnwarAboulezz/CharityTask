@@ -16,4 +16,11 @@ namespace Orders.Service.Dto
         public int? AmountInStock { get; set; }
         public int? RemainAmountInStock { get; set; }
     }
+
+    public class ProductResetDto : BaseDto
+    {
+        public int? ProductTypeId { get; set; }
+        public int AddedAmount { get; set; }
+    }
+
 }

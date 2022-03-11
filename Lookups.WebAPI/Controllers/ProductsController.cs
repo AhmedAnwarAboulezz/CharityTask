@@ -112,6 +112,23 @@ namespace Orders.WebAPI.Controllers
             return Ok();
         }
 
+
+        /// <summary>
+        /// Decrease Remain In Stock
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> DecreaseRemainInStock(Guid productId)
+        {
+            var message = await _productService.DecreaseRemainInStock(productId);
+            if (!string.IsNullOrWhiteSpace(message))
+            {
+                return BadRequest(message);
+            }
+            return Ok();
+        }
+
     }
 
 }
