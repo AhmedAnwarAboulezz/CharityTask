@@ -10,7 +10,7 @@ namespace Orders.Service.Interfaces
     public interface IProductService
     {
         Task<IEnumerable<ProductDto>> GetAll();
-        Task<PagedListDto<ProductDto>> GetAllCountriesPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto);
+        Task<PagedListDto<ProductDto>> GetAllProductsPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto);
         Task<ProductDto> Get(Guid id);
         Task<string> Add(ProductDto productDto);
         Task<string> Update(ProductDto productDto);

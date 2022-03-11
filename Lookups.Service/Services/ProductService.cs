@@ -27,7 +27,7 @@ namespace Orders.Service.Services
             return Mapper.Map<IEnumerable<Product>, IEnumerable<ProductDto>>(list);
         }
 
-        public async Task<PagedListDto<ProductDto>> GetAllCountriesPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto)
+        public async Task<PagedListDto<ProductDto>> GetAllProductsPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto)
         {
             var predicate = Helper.GetPredicate<Product, ProductFilterDto>(filteringDto);
             var (list, count) = await UnitOfWork.GetRepository<Product>().GetPagedListAsync(predicate, pagingSortingDto);

@@ -27,7 +27,7 @@ namespace Orders.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> GetAllPaged([FromBody] ProductFilterDto filteringDto, [FromQuery] PagingSortingDto pagingSortingDto)
         {
-            var result = await _productService.GetAllCountriesPaged(filteringDto, pagingSortingDto);
+            var result = await _productService.GetAllProductsPaged(filteringDto, pagingSortingDto);
             return Ok(result);
         }
         /// <summary>
