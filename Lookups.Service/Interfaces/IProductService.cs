@@ -11,6 +11,7 @@ namespace Orders.Service.Interfaces
     {
         Task<IEnumerable<ProductDto>> GetAll();
         Task<PagedListDto<ProductDto>> GetAllProductsPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto);
+        Task<IEnumerable<ProductDto>> GetAllByProductType(int productType);
         Task<ProductDto> Get(Guid id);
         Task<string> Add(ProductDto productDto);
         Task<string> Update(ProductDto productDto);

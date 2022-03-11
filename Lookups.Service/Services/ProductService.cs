@@ -26,7 +26,11 @@ namespace Orders.Service.Services
             var list = await UnitOfWork.GetRepository<Product>().GetAllAsync();
             return Mapper.Map<IEnumerable<Product>, IEnumerable<ProductDto>>(list);
         }
-
+        public async Task<IEnumerable<ProductDto>> GetAllByProductType(int productType)
+        {
+            var list = await UnitOfWork.GetRepository<Product>().FindAsync(a=>a.ProductTypeId == productType);
+            return Mapper.Map<IEnumerable<Product>, IEnumerable<ProductDto>>(list);
+        }
         public async Task<PagedListDto<ProductDto>> GetAllProductsPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto)
         {
             var predicate = Helper.GetPredicate<Product, ProductFilterDto>(filteringDto);

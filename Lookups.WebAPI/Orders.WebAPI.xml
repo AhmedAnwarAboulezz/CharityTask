@@ -61,6 +61,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.GetAllByProductType(System.Int32)">
+            <summary>
+            Get All Products By Product Type
+            </summary>
+            <param name="productType">Product Type</param>
+            <returns></returns>
+        </member>
         <member name="M:Orders.WebAPI.Controllers.ProductsController.Get(System.Guid)">
             <summary>
             Get data by Id

@@ -41,6 +41,19 @@ namespace Orders.WebAPI.Controllers
             return Ok(list);
         }
         /// <summary>
+        /// Get All Products By Product Type
+        /// </summary>
+        /// <param name="productType">Product Type</param>
+        /// <returns></returns>
+        [HttpGet("{productType}")]
+        public async Task<IActionResult> GetAllByProductType(int productType)
+        {
+            var product = await _productService.GetAllByProductType(productType);
+
+            return Ok(product);
+        }
+
+        /// <summary>
         /// Get data by Id
         /// </summary>
         /// <param name="id">PK Column Id</param>
