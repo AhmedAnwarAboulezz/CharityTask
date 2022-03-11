@@ -177,15 +177,7 @@ namespace Common.StandardInfrastructure
             }
             return true;
         }
-        public static string GetWeekDay(Guid? weekDay)
-        {
-            var weekDaysEnums = Enum.GetValues(typeof(WeekDaysEnum));
-            foreach (var enumItem in weekDaysEnums)
-            {
-                if (((WeekDaysEnum)enumItem).GetEnumGuid() == weekDay) return enumItem.ToString();
-            }
-            return null;
-        }
+
         public static bool IsNullOrEmptyDate(DateTime date)
         {
             return date == null || date == default(DateTime);

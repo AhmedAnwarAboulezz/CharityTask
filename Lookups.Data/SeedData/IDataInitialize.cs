@@ -5,9 +5,10 @@ namespace Orders.Data.SeedData
 {
     public interface IDataInitialize
     {
-        IEnumerable<Country> AddCountries();
-      
-        IEnumerable<Gender> AddGenders();
-       
+
+        IEnumerable<Product> AddProducts();
+        IEnumerable<ProductType> AddProductTypes();
+
+
     }
 }

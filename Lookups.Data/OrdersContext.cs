@@ -19,14 +19,17 @@ namespace Orders.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Country>().HasData(_dataInit.AddCountries());
-            modelBuilder.Entity<Gender>().HasData(_dataInit.AddGenders());
+            modelBuilder.Entity<ProductType>().HasData(_dataInit.AddProductTypes());
+            modelBuilder.Entity<Product>().HasData(_dataInit.AddProducts());
             base.OnModelCreating(modelBuilder);
         }
         public virtual DbSet<Country> Countries { get; set; }
-       
         public virtual DbSet<Gender> Gender { get; set; }
-       
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductType> ProductTypes { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             var entries = ChangeTracker.Entries();

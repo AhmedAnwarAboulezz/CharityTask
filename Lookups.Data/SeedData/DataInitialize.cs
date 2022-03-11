@@ -1,4 +1,5 @@
 ﻿using Common.StandardInfrastructure;
+using Common.StandardInfrastructure.Utility;
 using Orders.Data.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,33 @@ namespace Orders.Data.SeedData
     public class DataInitialize : IDataInitialize
     {
 
-        public IEnumerable<Country> AddCountries()
-        {
-            return new List<Country>()
-            {
-                new Country{ Id = new Guid("5C60F693-BEF5-E011-A485-80EE7300C695"),NameSl="مصر", NameFl = "Egypt"},
-                new Country{ Id = new Guid("5C60F693-BEF5-E011-A485-80EE7300C696"), NameSl = "الكويت", NameFl = "Kuwait"}
-            };
-        }
        
-        public IEnumerable<Gender> AddGenders()
+        public IEnumerable<ProductType> AddProductTypes()
         {
-            var enums = Enum.GetValues(typeof(GenderEnum));
+            var enums = Enum.GetValues(typeof(ProductTypeEnum));
             return (from object enumItem in enums
-                    select new Gender
+                    select new ProductType
                     {
-                        Id = ((GenderEnum)enumItem).GetEnumGuid(),
-                        GenderNameFl = ((GenderEnum)enumItem).GetName(true)[0],
-                        GenderNameSl = ((GenderEnum)enumItem).GetName(true)[1],
-                        IsShown = ((GenderEnum)enumItem).GetEnumGuid() == GenderEnum.Both.GetEnumGuid() ? false : true
+                        Id = (int)((ProductTypeEnum)enumItem),
+                        NameFl = ((ProductTypeEnum)enumItem).GetName(true)[0],
+                        NameSl = ((ProductTypeEnum)enumItem).GetName(true)[1]                        
                     }).ToList();
-
-
         }
 
-       
+        public IEnumerable<Product> AddProducts()
+        {
+            var dataText = System.IO.File.ReadAllText(@"seed/Products.json");
+            var data = Seeder<IEnumerable<Product>>.Seedit(dataText).Select(SetRemainAmountInStock);
+            return data;
+        }
+        private Product SetRemainAmountInStock(Product product)
+        {
+            product.RemainAmountInStock = 0;
+            return product;
+        }
+
+
+
 
     }
 }

@@ -1,0 +1,95 @@
+[
+  //Products
+  {
+    "Id": "10000000-0000-0000-0000-000000000001",
+    "Code": "SL-BR",
+    "NameFl": "Brownie",
+    "NameSl": "Brownie",
+    "Price": "65",
+    "Currency": "c",
+    "ProductTypeId": "1",
+    "AmountInStock": "48"
+  },
+  {
+    "Id": "10000000-0000-0000-0000-000000000002",
+    "Code": "SL-MF",
+    "NameFl": "Muffin",
+    "NameSl": "Muffin",
+    "Price": "1.00",
+    "Currency": "€",
+    "ProductTypeId": "1",
+    "AmountInStock": "36"
+  },
+  {
+    "Id": "10000000-0000-0000-0000-000000000003",
+    "Code": "SL-CP",
+    "NameFl": "Cake Pop",
+    "NameSl": "Cake Pop",
+    "Price": "1.35",
+    "Currency": "€",
+    "ProductTypeId": "1",
+    "AmountInStock": "24"
+  },
+  {
+    "Id": "10000000-0000-0000-0000-000000000004",
+    "Code": "SL-AT",
+    "NameFl": "Apple Tart",
+    "NameSl": "Apple Tart",
+    "Price": "1.50",
+    "Currency": "€",
+    "ProductTypeId": "1",
+    "AmountInStock": "60"
+  },
+  {
+    "Id": "10000000-0000-0000-0000-000000000005",
+    "Code": "SL-WR",
+    "NameFl": "Water",
+    "NameSl": "Water",
+    "Price": "1.50",
+    "Currency": "€",
+    "ProductTypeId": "1",
+    "AmountInStock": "30"
+  },
+
+  //Donated Products
+  {
+    "Id": "20000000-0000-0000-0000-000000000001",
+    "Code": "DN-ST",
+    "NameFl": "Shirt",
+    "NameSl": "Shirt",
+    "Price": "2.00",
+    "Currency": "€",
+    "ProductTypeId": "2",
+    "AmountInStock": "0"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000002",
+    "Code": "DN-PN",
+    "NameFl": "Pants",
+    "NameSl": "Pants",
+    "Price": "3.00",
+    "Currency": "€",
+    "ProductTypeId": "2",
+    "AmountInStock": "0"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000003",
+    "Code": "DN-JK",
+    "NameFl": "Jacket",
+    "NameSl": "Jacket",
+    "Price": "4.00",
+    "Currency": "€",
+    "ProductTypeId": "2",
+    "AmountInStock": "0"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000004",
+    "Code": "DN-TY",
+    "NameFl": "Toy",
+    "NameSl": "Toy",
+    "Price": "1.00",
+    "Currency": "€",
+    "ProductTypeId": "2",
+    "AmountInStock": "0"
+  }
+]

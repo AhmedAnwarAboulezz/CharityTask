@@ -15,6 +15,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Seed\Products.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Seed\Products.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
