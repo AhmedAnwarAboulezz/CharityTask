@@ -20,7 +20,5 @@ namespace Orders.Data.Entities
         public int AmountInStock { get; set; }
         public int? RemainAmountInStock { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-
-
     }
 }

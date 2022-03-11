@@ -23,7 +23,6 @@ namespace Orders.Data
             modelBuilder.Entity<Product>().HasData(_dataInit.AddProducts());
             base.OnModelCreating(modelBuilder);
         }
-        public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductType> ProductTypes { get; set; }
