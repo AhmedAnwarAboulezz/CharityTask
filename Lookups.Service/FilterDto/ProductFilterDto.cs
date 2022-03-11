@@ -4,7 +4,7 @@ using System;
 
 namespace Orders.Service.FilterDto
 {
-    public class CountryFilterDto
+    public class ProductFilterDto
     {
         public DynamicFilterDto<string> Code { get; set; }
         public DynamicFilterDto<string> NameFl { get; set; }

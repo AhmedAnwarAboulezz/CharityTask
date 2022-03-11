@@ -16,54 +16,6 @@
         <member name="M:Orders.WebAPI.Controllers.Base.BaseController.#ctor">
             <inheritdoc />
         </member>
-        <member name="T:Orders.WebAPI.Controllers.CountriesController">
-            <inheritdoc />
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.#ctor(Orders.Service.Interfaces.ICountryService)">
-            <inheritdoc />
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.GetAllPaged(Orders.Service.FilterDto.CountryFilterDto,Common.StandardInfrastructure.PagingSortingDto)">
-            <summary>
-            Get data pagged 
-            </summary>
-            <param name="filteringDto"> Search filter</param>
-            <param name="pagingSortingDto">Sort Parameters</param>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.GetAll">
-            <summary>
-            Get all data 
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.Get(System.Guid)">
-            <summary>
-            Get data by Id
-            </summary>
-            <param name="id">PK Column Id</param>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.Add(Orders.Service.Dto.CountryDto)">
-            <summary>
-            Insert new
-            </summary>
-            <param name="countryDto">Inserted object</param>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.Update(Orders.Service.Dto.CountryDto)">
-            <summary>
-            Update data
-            </summary>
-            <param name="countryDto">Updated Object</param>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.CountriesController.Delete(System.Guid)">
-            <summary>
-            Delete data by Id
-            </summary>
-            <param name="id">PK Column Id</param>
-            <returns></returns>
-        </member>
         <member name="T:Orders.WebAPI.Controllers.GendersController">
             <inheritdoc />
         </member>
@@ -85,6 +37,54 @@
         <member name="M:Orders.WebAPI.Controllers.GendersController.Get(System.Guid)">
             <summary>
             Get data by Id
+            </summary>
+            <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Orders.WebAPI.Controllers.ProductsController">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.#ctor(Orders.Service.Interfaces.IProductService)">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.GetAllPaged(Orders.Service.FilterDto.ProductFilterDto,Common.StandardInfrastructure.PagingSortingDto)">
+            <summary>
+            Get data pagged 
+            </summary>
+            <param name="filteringDto"> Search filter</param>
+            <param name="pagingSortingDto">Sort Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.GetAll">
+            <summary>
+            Get all data 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.Get(System.Guid)">
+            <summary>
+            Get data by Id
+            </summary>
+            <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.Add(Orders.Service.Dto.ProductDto)">
+            <summary>
+            Insert new
+            </summary>
+            <param name="productDto">Inserted object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.Update(Orders.Service.Dto.ProductDto)">
+            <summary>
+            Update data
+            </summary>
+            <param name="productDto">Updated Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.ProductsController.Delete(System.Guid)">
+            <summary>
+            Delete data by Id
             </summary>
             <param name="id">PK Column Id</param>
             <returns></returns>

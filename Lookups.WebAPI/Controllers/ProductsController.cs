@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace Orders.WebAPI.Controllers
 {
     /// <inheritdoc />
-    public class CountriesController : BaseController
+    public class ProductsController : BaseController
     {
-        private readonly ICountryService _countryService;
+        private readonly IProductService _productService;
         /// <inheritdoc />
-        public CountriesController(ICountryService countryService)
+        public ProductsController(IProductService productService)
         {
-            _countryService = countryService;
+            _productService = productService;
         }
         /// <summary>
         /// Get data pagged 
@@ -25,9 +25,9 @@ namespace Orders.WebAPI.Controllers
         /// <param name="pagingSortingDto">Sort Parameters</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> GetAllPaged([FromBody] CountryFilterDto filteringDto, [FromQuery] PagingSortingDto pagingSortingDto)
+        public async Task<IActionResult> GetAllPaged([FromBody] ProductFilterDto filteringDto, [FromQuery] PagingSortingDto pagingSortingDto)
         {
-            var result = await _countryService.GetAllCountriesPaged(filteringDto, pagingSortingDto);
+            var result = await _productService.GetAllCountriesPaged(filteringDto, pagingSortingDto);
             return Ok(result);
         }
         /// <summary>
@@ -37,7 +37,7 @@ namespace Orders.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var list = await _countryService.GetAll();
+            var list = await _productService.GetAll();
             return Ok(list);
         }
         /// <summary>
@@ -48,19 +48,19 @@ namespace Orders.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            var country = await _countryService.Get(id);
+            var product = await _productService.Get(id);
 
-            return Ok(country);
+            return Ok(product);
         }
         /// <summary>
         /// Insert new
         /// </summary>
-        /// <param name="countryDto">Inserted object</param>
+        /// <param name="productDto">Inserted object</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> Add(CountryDto countryDto)
+        public async Task<IActionResult> Add(ProductDto productDto)
         {
-            var message = await _countryService.Add(countryDto);
+            var message = await _productService.Add(productDto);
             if (!string.IsNullOrWhiteSpace(message))
             {
                 return BadRequest(message);
@@ -70,12 +70,12 @@ namespace Orders.WebAPI.Controllers
         /// <summary>
         /// Update data
         /// </summary>
-        /// <param name="countryDto">Updated Object</param>
+        /// <param name="productDto">Updated Object</param>
         /// <returns></returns>
         [HttpPut()]
-        public async Task<IActionResult> Update(CountryDto countryDto)
+        public async Task<IActionResult> Update(ProductDto productDto)
         {
-            var message = await _countryService.Update(countryDto);
+            var message = await _productService.Update(productDto);
             if (!string.IsNullOrWhiteSpace(message))
             {
                 return BadRequest(message);
@@ -91,7 +91,7 @@ namespace Orders.WebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var message = await _countryService.Delete(id);
+            var message = await _productService.Delete(id);
             if (!string.IsNullOrWhiteSpace(message))
             {
                 return BadRequest(message);

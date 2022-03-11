@@ -31,7 +31,7 @@ namespace Orders.Data.SeedData
         }
         private Product SetRemainAmountInStock(Product product)
         {
-            product.RemainAmountInStock = 0;
+            product.RemainAmountInStock = product.AmountInStock;
             return product;
         }
 

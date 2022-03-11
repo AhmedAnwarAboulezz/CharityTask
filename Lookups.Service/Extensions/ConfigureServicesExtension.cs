@@ -34,7 +34,7 @@ namespace Orders.Service.Extensions
             services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<IDataInitialize, DataInitialize>();
-            var assemblyToScan = Assembly.GetAssembly(typeof(CountryService));
+            var assemblyToScan = Assembly.GetAssembly(typeof(ProductService));
             services.RegisterAssemblyPublicNonGenericClasses(assemblyToScan).Where(c => c.Name.EndsWith("Service"))
               .AsPublicImplementedInterfaces();
         }

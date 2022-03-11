@@ -11,16 +11,17 @@ namespace Orders.Service.AutoMapper
 
         public OrdersProfile()
         {
-            MapCountry();            
+            MapProduct();            
             MapGender();           
         }
 
-        
 
-        private void MapCountry()
+        private void MapProduct()
         {
-            CreateMap<CountryDto, Country>().ReverseMap();
+            CreateMap<ProductDto, Product>().ReverseMap();
         }
+
+
       
         private void MapGender()
         {
