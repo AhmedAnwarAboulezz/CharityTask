@@ -26,5 +26,5 @@ Image should be grayed out, if it is out of stock.
 Total amount of payment is shown in the bottom of the screen.
 Below total amount is options to reset and checkout. Checkout prompts paid cash amount to be
 inserted.
-# The application must calculate the smallest amount of change to give a person if they overpay.
-# Validations and cash returned functionality works as in every store. Be logical
+The application must calculate the smallest amount of change to give a person if they overpay.
+Validations and cash returned functionality works as in every store. Be logical
