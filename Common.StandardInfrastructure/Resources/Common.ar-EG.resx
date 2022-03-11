@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CannotDelete" xml:space="preserve">
+    <value>تغذر حذف هذا الحقل</value>
+  </data>
+  <data name="DateGreaterThan" xml:space="preserve">
+    <value>تاريخ البداية يجب ان يكون اقل من او يساوي تاريخ النهاية</value>
+  </data>
+  <data name="DateInEmployeeHiringPeriod" xml:space="preserve">
+    <value>تاريخ البداية يجب ان يكون داخل فترة تعين الموظف</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>تم الحذف</value>
+  </data>
+  <data name="EndDataBEforeStartDate" xml:space="preserve">
+    <value>تاريخ بداية الفترة يجب ان يكون قبل تاريخ نهاية الفترة</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>تاريخ النهاية مطلوب</value>
+  </data>
+  <data name="LastStartDate" xml:space="preserve">
+    <value>تاريخ البداية يجب ان يكون اكبر من تاريخ بداية اخر عملية</value>
+  </data>
+  <data name="OperationExists" xml:space="preserve">
+    <value>البيانات موجودة بالفعل</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>حقل مطلوب</value>
+  </data>
+  <data name="SDateAndEndDateOverlapWithAnother" xml:space="preserve">
+    <value>هذه الفترة محجوزة مسبقا او تحتوي على ايام في فترة اخرى</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>تم الحفظ بنجاح</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>تم التعديل</value>
+  </data>
+  <data name="AdminLeveldoesnotexist" xml:space="preserve">
+    <value>الموقع غير موجود</value>
+  </data>
+  <data name="Locationdoesnotexist" xml:space="preserve">
+    <value>هذه الإدارة غير موجودة</value>
+  </data>
+  <data name="TimeGreaterThan" xml:space="preserve">
+    <value>وقت البداية يجب ان يكون اقل من او يساوي وقت النهاية</value>
+  </data>
+  <data name="AssignToDailyRotatedScheduleBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى شاشة( جدول الدوامات اليومية) اولا</value>
+  </data>
+  <data name="AssignToEmergencyAllowanceBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى شاشة( الإعفائات الطارئة) اولا</value>
+  </data>
+  <data name="AssignToEmployeeAllowanceBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى   شاشة( إعفاءات الموظفين) اولا</value>
+  </data>
+  <data name="AssignToEmployeeBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف  الموظف اولا</value>
+  </data>
+  <data name="AssignToEmployeeDutyBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى   شاشة( دوامات الموظفين) اولا</value>
+  </data>
+  <data name="AssignToEmployeeFixedDutyPeriodBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى   شاشة( دوامات ثابتة فترات ) اولا</value>
+  </data>
+  <data name="AssignToEmployeeFullDayPermissionBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف في شاشة تصريحات يوم كامل) اولا</value>
+  </data>
+  <data name="AssignToEmployeeLeaveBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى   شاشة( أجازات الموظفين) اولا</value>
+  </data>
+  <data name="AssignToEmployeePermissionBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى   شاشة( التصريحات الجزئية للموظفين) اولا</value>
+  </data>
+  <data name="AssignToHolidayDateBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف في شاشة( تواريخ العطلات) اولا</value>
+  </data>
+  <data name="AssignToLateRegulationBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف في شاشة( حساب خصم التأخيرات) اولا</value>
+  </data>
+  <data name="AssignToLeaveRegulationBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف فى شاشة( لائحة الأجازات) اولا</value>
+  </data>
+  <data name="AssignToLocationBefore" xml:space="preserve">
+    <value>من فضلك قم بحذف الموقع  اولا</value>
+  </data>
+  <data name="AssignToOverTimeOrderBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف في (شاشة تعيين وقت إضافي) اولا</value>
+  </data>
+  <data name="AssignToPartialPermissionTypeBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف  في شاشة( التصريحات الجزئية) اولا</value>
+  </data>
+  <data name="AssignToPreviousLeavesBalanceBefore" xml:space="preserve">
+    <value>من فضلك قم بالحذف في شاشة( أرصدة أجازات سابق) اولا</value>
+  </data>
+  <data name="AssignToTeamBefore" xml:space="preserve">
+    <value>من فضلك قم بحذف  ( الفريق ) اولا</value>
+  </data>
+  <data name="AssignToUserBefore" xml:space="preserve">
+    <value>من فضلك قم بحذف( المستخدم) اولا</value>
+  </data>
+  <data name="AssignToUserInqueryBefore" xml:space="preserve">
+    <value>من فضلك قم بحذف المستخدم من شاشة ( مستخدمى الاستعلامات ) اولا</value>
+  </data>
+  <data name="PreviousLeavesBalanceIsExists" xml:space="preserve">
+    <value>البيانات موجودة مسبقا</value>
+  </data>
+  <data name="StartDtaeMustBeGreterThanthePreviousOperation" xml:space="preserve">
+    <value>تاريخ البداية يجب ان يكون اكبر من تاريخ اخر عملية</value>
+  </data>
+  <data name="DaysAtLeast" xml:space="preserve">
+    <value>أيام على الأقل</value>
+  </data>
+  <data name="RequestShouldAppliedBefore" xml:space="preserve">
+    <value>الطلب يجب أن يقدم قبل </value>
+  </data>
+  <data name="RestDayandWeekendDayShouldnotbethesameDays" xml:space="preserve">
+    <value>يوم الاجازه ويوم الراحه  يجب ان يكونوا مختلفين</value>
+  </data>
+</root>

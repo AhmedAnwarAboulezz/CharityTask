@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdministrativeLevelDto_AdmLevelFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AdministrativeLevelDto_AdmLevelSl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AdministrativeLevelDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="AdministrativeLevelDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="AllowanceDto_AllowanceFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AllowanceDto_AllowanceSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AllowanceTypeDto_AllowanceTypeFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AllowanceTypeDto_AllowanceTypesId_Required" xml:space="preserve">
+    <value>نوع السماحية مطلوب</value>
+  </data>
+  <data name="AllowanceTypeDto_AllowanceTypeSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="AllowanceTypeDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="AllowanceTypeDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="FullDayPermissionDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="FullDayPermissionDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="FullDayPermissionDto_FullDayPermissionFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="FullDayPermissionDto_FullDayPermissionSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="HolidayDateController_IsExists" xml:space="preserve">
+    <value>الأجازة المطلوبة موجودة بالفعل</value>
+  </data>
+  <data name="HolidayDateController_ValidateDate" xml:space="preserve">
+    <value>تاريخ نهاية الاجازة لابد ان يكون اكبر من او يساوي تاريخ البداية</value>
+  </data>
+  <data name="HolidayDateDto_CountryID" xml:space="preserve">
+    <value>الدولة مطلوبة</value>
+  </data>
+  <data name="HolidayDateDto_EndDate" xml:space="preserve">
+    <value>تاريخ النهاية مطلوب</value>
+  </data>
+  <data name="HolidayDateDto_HolidayID" xml:space="preserve">
+    <value>الاجازة مطلوبه</value>
+  </data>
+  <data name="HolidayDateDto_StartDate" xml:space="preserve">
+    <value>تاريخ البداية مطلوب</value>
+  </data>
+  <data name="HolidayDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="HolidayDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="HolidayDto_PublicHolidayNameFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="HolidayDto_PublicHolidayNameSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="JobDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="JobsController_IsExists" xml:space="preserve">
+    <value>الوظيفة موجودة بالفعل</value>
+  </data>
+  <data name="FullDayPermissionService_IsExists" xml:space="preserve">
+    <value>تصريح يوم كامل موجود بالفعل </value>
+  </data>
+  <data name="HolidayService_IsExists" xml:space="preserve">
+    <value>الاجازة موجودة بالفعل</value>
+  </data>
+  <data name="JobDegreeDto_JobDegreeFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="JobDegreeDto_JobDegreeSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="JobDegreeService_IsExists" xml:space="preserve">
+    <value>الدرجة الوظيفية موجودة بالفعل</value>
+  </data>
+  <data name="JobDto_JobFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="JobDto_JobSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="JobService_IsExists" xml:space="preserve">
+    <value>الوظيفة موجودة بالفعل</value>
+  </data>
+  <data name="LateRegulationsDto_Allowance_Required" xml:space="preserve">
+    <value>السماحية مطلوبة</value>
+  </data>
+  <data name="LateRegulationsDto_DeductionCategoreID_Required" xml:space="preserve">
+    <value>نوع الخصم مطلوب</value>
+  </data>
+  <data name="LateRegulationsDto_DeductionGroupTypeID_Required" xml:space="preserve">
+    <value>Deduction Group Type is required</value>
+  </data>
+  <data name="LateRegulationsDto_EndDate_Required" xml:space="preserve">
+    <value>تاريخ النهاية مطلوب</value>
+  </data>
+  <data name="LateRegulationsDto_LateRegulationFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LateRegulationsDto_LateRegulationSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LateRegulationsDto_StartDate_Required" xml:space="preserve">
+    <value>تاريخ البداية مطلوب</value>
+  </data>
+  <data name="LateRegulationService_IsExists" xml:space="preserve">
+    <value>مجموعة رصيد التأخيرات موجودة بالفعل</value>
+  </data>
+  <data name="LateRegulationService_ValidateDate" xml:space="preserve">
+    <value>تاريخ النهاية لابد ان يكون اكبر من او يساوي تاريخ البداية</value>
+  </data>
+  <data name="NationalityDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="NationalityDto_NationalityFl_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="NationalityDto_NationalitySl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="NationalityService_IsExists" xml:space="preserve">
+    <value>الجنسية موجودة بالفعل</value>
+  </data>
+  <data name="Administrative_LevelsService_IsExists" xml:space="preserve">
+    <value>المستوي الاداري موجودة بالفعل</value>
+  </data>
+  <data name="AllowanceService_IsExists" xml:space="preserve">
+    <value>السماحيةموجودة بالفعل</value>
+  </data>
+  <data name="AttachmentsTypeDto_NameFl_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 50 حرف</value>
+  </data>
+  <data name="AttachmentsTypeDto_NameSl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 50 حرف</value>
+  </data>
+  <data name="ContractTypeDto_ContractTypeFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="ContractTypeDto_ContractTypeSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="ContractTypeService_IsExists" xml:space="preserve">
+    <value>نوع العقد موجودة بالفعل</value>
+  </data>
+  <data name="CountryService_IsExists" xml:space="preserve">
+    <value>الدولة موجودة بالفعل</value>
+  </data>
+  <data name="LeavesTypesDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="LeavesTypesDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="LeavesTypesDto_LeaveTypeFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LeavesTypesDto_LeaveTypeSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LeavesTypesService_IsExists" xml:space="preserve">
+    <value>يوجد نوع اجازه بهذا الاسم بالفعل </value>
+  </data>
+  <data name="LocationDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="LocationDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="LocationDto_CountryId_Required" xml:space="preserve">
+    <value>الدولة مطلوب</value>
+  </data>
+  <data name="LocationDto_LocationFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LocationDto_LocationSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="LocationService_IsExists" xml:space="preserve">
+    <value>الموقع موجود بالفعل</value>
+  </data>
+  <data name="OverTimeDateDto_EndDate_Required" xml:space="preserve">
+    <value>تاريخ النهاية مطلوب</value>
+  </data>
+  <data name="OverTimeDateDto_EndPeriod_Required" xml:space="preserve">
+    <value>End Period is required</value>
+  </data>
+  <data name="OverTimeDateDto_Rate_Required" xml:space="preserve">
+    <value>المعدل مطلوب</value>
+  </data>
+  <data name="OverTimeDateDto_StartDate_Required" xml:space="preserve">
+    <value>تاريخ البداية مطلوب</value>
+  </data>
+  <data name="OverTimeDateDto_StartPeriod_Required" xml:space="preserve">
+    <value>Start Period is required</value>
+  </data>
+  <data name="OverTimeDateService_IsExists" xml:space="preserve">
+    <value>الوقت الاضافي موجود بالفعل</value>
+  </data>
+  <data name="OverTimeDateService_ValidateDate" xml:space="preserve">
+    <value>تاريخ النهاية لابد ان يكون اكبر من او يساوي تاريخ البداية</value>
+  </data>
+  <data name="PartialPermissionTypeDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 6 حروف</value>
+  </data>
+  <data name="PartialPermissionTypeDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="PartialPermissionTypeDto_CountryId_Required" xml:space="preserve">
+    <value>الدولة مطلوب</value>
+  </data>
+  <data name="PartialPermissionTypeDto_PartialPermissionFL_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="PartialPermissionTypeDto_PartialPermissionSL_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="PartialPermissionTypeService_IsExists" xml:space="preserve">
+    <value>This Partial Permission Type already exist</value>
+  </data>
+  <data name="QualificationDto_QualificationTypeFl_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="QualificationDto_QualificationTypeSl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="QualificationService_IsExists" xml:space="preserve">
+    <value>المؤهل موجودة بالفعل</value>
+  </data>
+  <data name="ReligionDto_Code_Length" xml:space="preserve">
+    <value>الكود لا يزيد عن 10 حروف</value>
+  </data>
+  <data name="ReligionDto_Code_Required" xml:space="preserve">
+    <value>الكود مطلوب</value>
+  </data>
+  <data name="ReligionDto_DescriptionFl_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="ReligionDto_DescriptionSl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="ReligionService_IsExists" xml:space="preserve">
+    <value>الديانة موجودة بالفعل</value>
+  </data>
+  <data name="TeamDto_TeamFl_Length" xml:space="preserve">
+    <value>الاسم الاول لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="TeamDto_TeamSl_Length" xml:space="preserve">
+    <value>الاسم الثاني لا يزيد عن 200 حرف</value>
+  </data>
+  <data name="TeamService_IsExists" xml:space="preserve">
+    <value>الفريق موجود بالفعل</value>
+  </data>
+  <data name="DateBetweenStartandEnd" xml:space="preserve">
+    <value>هذه الفتره موجوده بالفعل في هذه السماحيه</value>
+  </data>
+  <data name="LeaveRegulation_IsExist" xml:space="preserve">
+    <value>توجد لائحة بهذا الاسم بالفعل</value>
+  </data>
+  <data name="HolidayDateIsExists" xml:space="preserve">
+    <value>توقيت الأجازة المدخلة لنفس نوع الأجازة والبلد موجود مسبقاً</value>
+  </data>
+  <data name="LateRegulationService_AllEmployeesIsExists" xml:space="preserve">
+    <value>هناك لائحة تأخيرات بالفعل لكل الموظفين فى تلك الفترة</value>
+  </data>
+  <data name="LateRegulationService_ContractsIsExists" xml:space="preserve">
+    <value>هناك لائحة تأخيرات بالفعل مرتبطة بأحد العقود المستخدمة فى تلك الفترة</value>
+  </data>
+  <data name="LateRegulationService_OldEmployeesIsExists" xml:space="preserve">
+    <value>هناك لائحة تأخيرات بالفعل لقدامى الموظفين فى تلك الفترة</value>
+  </data>
+  <data name="LengthOfServiceGreaterThan" xml:space="preserve">
+    <value>نهاية سنوات الخدمة يجب أن تكون أكبر من بداية سنوات الخدمة</value>
+  </data>
+  <data name="LateRegulationDeductionDto_DeductionCategoryId_Required" xml:space="preserve">
+    <value>يجب أختيار فئة الخصم</value>
+  </data>
+  <data name="LateRegulationDeductionDto_DeductionUnitId_Required" xml:space="preserve">
+    <value>يجب أختيار وحدة الخصم</value>
+  </data>
+  <data name="LateRegulationService_ContractTypeIsRequired" xml:space="preserve">
+    <value>يجب أختيار العقد أولا</value>
+  </data>
+  <data name="LateRegulationService_DeductionIsRequired" xml:space="preserve">
+    <value>يجب أختيار نوع الخصم</value>
+  </data>
+  <data name="LateRegulationService_LengthOfServiceIsRequired" xml:space="preserve">
+    <value>يجب أختيار مدة الخدمة</value>
+  </data>
+  <data name="Adminstrative_CannotDelete" xml:space="preserve">
+    <value>الادارة مربوط بها موظفين!</value>
+  </data>
+  <data name="Administrative_LevelsService_Assign_To_Itself" xml:space="preserve">
+    <value>لا يمكنك ربط المستوى الإداري بنفسه أو بأحد فروعه</value>
+  </data>
+  <data name="OverTimeDateService_MorningNightTimeIntersect" xml:space="preserve">
+    <value>فترة الصباح وفترة المساء لايمكن ان يتقاطعا</value>
+  </data>
+  <data name="Overtime_Regulation_IsExists" xml:space="preserve">
+    <value>هناك لائحة وقت اضافي بالفعل فى تلك الفترة</value>
+  </data>
+  <data name="DeviceService_IsExists" xml:space="preserve">
+    <value>رقم الجهاز موجود مسبقاً</value>
+  </data>
+  <data name="Organization_Late_Regulation_IsExists" xml:space="preserve">
+    <value>هناك لائحة تأخيرات بالفعل  فى تلك الفترة</value>
+  </data>
+  <data name="Absences_Regulation_IsExists" xml:space="preserve">
+    <value>هناك لائحة غيابات بالفعل  فى تلك الفترة</value>
+  </data>
+  <data name="cant_Delete_Default" xml:space="preserve">
+    <value>لا يمكن حذف اللائحة الاساسية</value>
+  </data>
+  <data name="Administrative_Has_Manager" xml:space="preserve">
+    <value>لا يمكن حذف إدارة لها مدير</value>
+  </data>
+</root>

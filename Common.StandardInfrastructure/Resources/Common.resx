@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CannotDelete" xml:space="preserve">
+    <value>Filed can't be removed</value>
+  </data>
+  <data name="DateGreaterThan" xml:space="preserve">
+    <value>Start date must be less than or equal end date.</value>
+  </data>
+  <data name="DateInEmployeeHiringPeriod" xml:space="preserve">
+    <value>Start date must be during employee hiring period.</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Data Deleted</value>
+  </data>
+  <data name="EndDataBEforeStartDate" xml:space="preserve">
+    <value>Start Date Must be less than or equal End Date</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>End date is required</value>
+  </data>
+  <data name="LastStartDate" xml:space="preserve">
+    <value>Start Date must be greater than start date for last operation.</value>
+  </data>
+  <data name="OperationExists" xml:space="preserve">
+    <value>Data exists.</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>Field Required</value>
+  </data>
+  <data name="SDateAndEndDateOverlapWithAnother" xml:space="preserve">
+    <value>Date Duration Has Overlap With Another Record</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Data save successfully</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Data Updated</value>
+  </data>
+  <data name="AdminLeveldoesnotexist" xml:space="preserve">
+    <value>Admin level does not exist</value>
+  </data>
+  <data name="Locationdoesnotexist" xml:space="preserve">
+    <value>Location does not exist</value>
+  </data>
+  <data name="TimeGreaterThan" xml:space="preserve">
+    <value>Start time must be less than or equal end time.</value>
+  </data>
+  <data name="AssignToDailyRotatedScheduleBefore" xml:space="preserve">
+    <value>Please, Delete ( Daily Rotated Schedule ) First.</value>
+  </data>
+  <data name="AssignToEmergencyAllowanceBefore" xml:space="preserve">
+    <value>Please, Delete ( Emergency Allowance ) First.</value>
+  </data>
+  <data name="AssignToEmployeeAllowanceBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Allowance ) First.</value>
+  </data>
+  <data name="AssignToEmployeeBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee ) First.</value>
+  </data>
+  <data name="AssignToEmployeeDutyBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Duty ) First.</value>
+  </data>
+  <data name="AssignToEmployeeFixedDutyPeriodBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Fixed Duty Period ) First.</value>
+  </data>
+  <data name="AssignToEmployeeFullDayPermissionBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Full Day Permission ) First.</value>
+  </data>
+  <data name="AssignToEmployeeLeaveBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Leave ) First.</value>
+  </data>
+  <data name="AssignToEmployeePermissionBefore" xml:space="preserve">
+    <value>Please, Delete ( Employee Permission ) First.</value>
+  </data>
+  <data name="AssignToHolidayDateBefore" xml:space="preserve">
+    <value>Please, Delete ( Holiday Date ) First.</value>
+  </data>
+  <data name="AssignToLateRegulationBefore" xml:space="preserve">
+    <value>Please, Delete ( Late Regulation ) First.</value>
+  </data>
+  <data name="AssignToLeaveRegulationBefore" xml:space="preserve">
+    <value>Please, Delete ( Leave Regulation ) First.</value>
+  </data>
+  <data name="AssignToLocationBefore" xml:space="preserve">
+    <value>Please, Delete ( Location ) First.</value>
+  </data>
+  <data name="AssignToOverTimeOrderBefore" xml:space="preserve">
+    <value>Please, Delete ( OverTime Order ) First.</value>
+  </data>
+  <data name="AssignToPartialPermissionTypeBefore" xml:space="preserve">
+    <value>Please, Delete ( Partial Permission Type ) First.</value>
+  </data>
+  <data name="AssignToPreviousLeavesBalanceBefore" xml:space="preserve">
+    <value>Please, Delete ( Previous Leaves Balance ) First.</value>
+  </data>
+  <data name="AssignToTeamBefore" xml:space="preserve">
+    <value>Please, Delete ( Team ) First.</value>
+  </data>
+  <data name="AssignToUserBefore" xml:space="preserve">
+    <value>Please, Delete ( User ) First.</value>
+  </data>
+  <data name="AssignToUserInqueryBefore" xml:space="preserve">
+    <value>Please, Delete ( User Inquery ) First.</value>
+  </data>
+  <data name="PreviousLeavesBalanceIsExists" xml:space="preserve">
+    <value>Previous Leaves Balance Is Exists</value>
+  </data>
+  <data name="StartDtaeMustBeGreterThanthePreviousOperation" xml:space="preserve">
+    <value>Start Date must be greater than date for last operation.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error happend </value>
+  </data>
+  <data name="DaysAtLeast" xml:space="preserve">
+    <value>Days At Least</value>
+  </data>
+  <data name="RequestShouldAppliedBefore" xml:space="preserve">
+    <value>Request should be applied before</value>
+  </data>
+  <data name="RestDayandWeekendDayShouldnotbethesameDays" xml:space="preserve">
+    <value>RestDay and WeekendDay  Should not be the same Days</value>
+  </data>
+</root>

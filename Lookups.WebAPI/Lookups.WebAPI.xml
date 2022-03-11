@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Orders.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Orders.WebAPI.AppExtensions.ConfigureExtension">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.AppExtensions.ConfigureExtension.ConfigureApp(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="T:Orders.WebAPI.Controllers.Base.BaseController">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.Base.BaseController.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:Orders.WebAPI.Controllers.CountriesController">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.#ctor(Orders.Service.Interfaces.ICountryService)">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.GetAllPaged(Orders.Service.FilterDto.CountryFilterDto,Common.StandardInfrastructure.PagingSortingDto)">
+            <summary>
+            Get data pagged 
+            </summary>
+            <param name="filteringDto"> Search filter</param>
+            <param name="pagingSortingDto">Sort Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.GetAll">
+            <summary>
+            Get all data 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.Get(System.Guid)">
+            <summary>
+            Get data by Id
+            </summary>
+            <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.Add(Orders.Service.Dto.CountryDto)">
+            <summary>
+            Insert new
+            </summary>
+            <param name="countryDto">Inserted object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.Update(Orders.Service.Dto.CountryDto)">
+            <summary>
+            Update data
+            </summary>
+            <param name="countryDto">Updated Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.CountriesController.Delete(System.Guid)">
+            <summary>
+            Delete data by Id
+            </summary>
+            <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Orders.WebAPI.Controllers.GendersController">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.GendersController.#ctor(Orders.Service.Interfaces.IGenderService)">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.GendersController.GetAll">
+            <summary>
+            Get all data 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.GendersController.GetDropdownList">
+            <summary>
+            Get all data 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.GendersController.Get(System.Guid)">
+            <summary>
+            Get data by Id
+            </summary>
+            <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Orders.WebAPI.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Orders.WebAPI.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Orders.WebAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Orders.WebAPI.Startup">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="P:Orders.WebAPI.Startup.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="M:Orders.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">Specifies the contract for a collection of service descriptors</param>
+        </member>
+        <member name="M:Orders.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">Define a class that provides the mechanisms to configure an application's request pipline</param>
+            <param name="env">Provides information about the web hosting environment an application is running in</param>
+        </member>
+    </members>
+</doc>
