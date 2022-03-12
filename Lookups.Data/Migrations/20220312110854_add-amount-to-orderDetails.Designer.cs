@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Orders.Data;
 
 namespace Orders.Data.Migrations
 {
     [DbContext(typeof(OrdersContext))]
-    partial class OrdersContextModelSnapshot : ModelSnapshot
+    [Migration("20220312110854_add-amount-to-orderDetails")]
+    partial class addamounttoorderDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

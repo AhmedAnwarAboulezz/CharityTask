@@ -16,29 +16,30 @@
         <member name="M:Orders.WebAPI.Controllers.Base.BaseController.#ctor">
             <inheritdoc />
         </member>
-        <member name="T:Orders.WebAPI.Controllers.GendersController">
+        <member name="T:Orders.WebAPI.Controllers.OrdersController">
             <inheritdoc />
         </member>
-        <member name="M:Orders.WebAPI.Controllers.GendersController.#ctor(Orders.Service.Interfaces.IGenderService)">
+        <member name="M:Orders.WebAPI.Controllers.OrdersController.#ctor(Orders.Service.Interfaces.IOrderService)">
             <inheritdoc />
         </member>
-        <member name="M:Orders.WebAPI.Controllers.GendersController.GetAll">
+        <member name="M:Orders.WebAPI.Controllers.OrdersController.GetAll">
             <summary>
             Get all data 
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Orders.WebAPI.Controllers.GendersController.GetDropdownList">
-            <summary>
-            Get all data 
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Orders.WebAPI.Controllers.GendersController.Get(System.Guid)">
+        <member name="M:Orders.WebAPI.Controllers.OrdersController.Get(System.Guid)">
             <summary>
             Get data by Id
             </summary>
             <param name="id">PK Column Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Orders.WebAPI.Controllers.OrdersController.AddCheckout(Orders.Service.Dto.OrderDto)">
+            <summary>
+            Add checkout for order
+            </summary>
+            <param name="orderDto"></param>
             <returns></returns>
         </member>
         <member name="T:Orders.WebAPI.Controllers.ProductsController">

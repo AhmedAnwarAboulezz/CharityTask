@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Orders.Service.Interfaces
 {
-    public interface IGenderService
+    public interface IOrderService
     {
-        Task<GenderDto> Get(Guid id);
-        Task<IEnumerable<GenderDto>> GetAll();
-        Task<IEnumerable<DropdownDto>> GetDropdownList();
+        Task<OrderDto> Get(Guid id);
+        Task<IEnumerable<OrderDto>> GetAll();
+        Task<string> AddCheckout(OrderDto orderDto);
     }
 }

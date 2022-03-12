@@ -11,8 +11,8 @@ namespace Orders.Service.AutoMapper
 
         public OrdersProfile()
         {
-            MapProduct();            
-            MapGender();           
+            MapProduct();
+            MapOrder();           
         }
 
 
@@ -23,25 +23,10 @@ namespace Orders.Service.AutoMapper
 
 
       
-        private void MapGender()
+        private void MapOrder()
         {
-            CreateMap<GenderDto, Gender>().ReverseMap()
-                .ForMember(dest => dest.GenderNameFl, opts =>
-                opts.MapFrom(src => Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.Ar ||
-                Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.ArEn ? src.GenderNameSl : src.GenderNameFl))
-                .ForMember(dest => dest.GenderNameSl,
-                opts => opts.MapFrom(src => Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.En
-                 || Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.ArEn ? src.GenderNameFl : src.GenderNameSl));
-            CreateMap<DropdownDto, Gender>().ReverseMap()
-                .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.Id))
-
-                .ForMember(dest => dest.NameFl, opts =>
-                opts.MapFrom(src => Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.Ar ||
-                Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.ArEn ? src.GenderNameSl : src.GenderNameFl))
-                .ForMember(dest => dest.NameSl,
-                opts => opts.MapFrom(src => Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.En
-                 || Helper.ChangeProperty() == (int)Helper.ChangePropertyEnum.ArEn ? src.GenderNameFl : src.GenderNameSl));
-
+            CreateMap<OrderDto, Order>().ReverseMap();
+            CreateMap<OrderDetailDto, OrderDetail>().ReverseMap();
         }
       
 
