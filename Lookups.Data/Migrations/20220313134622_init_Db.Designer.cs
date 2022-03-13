@@ -2,45 +2,45 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Orders.Data;
 
 namespace Orders.Data.Migrations
 {
     [DbContext(typeof(OrdersContext))]
-    [Migration("20220312234137_remove-currency-from-product")]
-    partial class removecurrencyfromproduct
+    [Migration("20220313134622_init_Db")]
+    partial class init_Db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Relational:MaxIdentifierLength", 63)
+                .HasAnnotation("ProductVersion", "5.0.10")
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             modelBuilder.Entity("Orders.Data.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uuid");
 
                     b.Property<float>("Change")
                         .HasColumnType("real");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<float>("TotalPayment")
                         .HasColumnType("real");
@@ -57,25 +57,25 @@ namespace Orders.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Amount")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<Guid>("OrderId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uuid");
 
                     b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -90,41 +90,41 @@ namespace Orders.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uuid");
 
                     b.Property<int>("AmountInStock")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<string>("Code")
                         .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("character varying(10)");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("NameFl")
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("character varying(200)");
 
                     b.Property<string>("NameSl")
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("character varying(200)");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
                     b.Property<int>("ProductTypeId")
                         .HasMaxLength(5)
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<int?>("RemainAmountInStock")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -167,7 +167,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Cake Pop",
-                            NameSl = "Cake Pop",
+                            NameSl = "Kook Pop",
                             Price = 1.35f,
                             ProductTypeId = 1,
                             RemainAmountInStock = 24
@@ -180,7 +180,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Apple Tart",
-                            NameSl = "Apple Tart",
+                            NameSl = "�unatort",
                             Price = 1.5f,
                             ProductTypeId = 1,
                             RemainAmountInStock = 60
@@ -193,7 +193,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Water",
-                            NameSl = "Water",
+                            NameSl = "Vesi",
                             Price = 1.5f,
                             ProductTypeId = 1,
                             RemainAmountInStock = 30
@@ -206,7 +206,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Shirt",
-                            NameSl = "Shirt",
+                            NameSl = "S�rk",
                             Price = 2f,
                             ProductTypeId = 2,
                             RemainAmountInStock = 0
@@ -219,7 +219,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Pants",
-                            NameSl = "Pants",
+                            NameSl = "P�ksid",
                             Price = 3f,
                             ProductTypeId = 2,
                             RemainAmountInStock = 0
@@ -232,7 +232,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Jacket",
-                            NameSl = "Jacket",
+                            NameSl = "Jope",
                             Price = 4f,
                             ProductTypeId = 2,
                             RemainAmountInStock = 0
@@ -245,7 +245,7 @@ namespace Orders.Data.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDelete = false,
                             NameFl = "Toy",
-                            NameSl = "Toy",
+                            NameSl = "M�nguasi",
                             Price = 1f,
                             ProductTypeId = 2,
                             RemainAmountInStock = 0
@@ -256,16 +256,16 @@ namespace Orders.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("NameFl")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("NameSl")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("character varying(50)");
 
                     b.HasKey("Id");
 

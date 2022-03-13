@@ -23,10 +23,17 @@ namespace Orders.Service.Extensions
         }
         private static void DatabaseConfig(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("EASTI");
-
+             var connectionString = configuration.GetConnectionString("EASTIPostreq");
             services.AddDbContext<OrdersContext>
-                (options => options.UseSqlServer(connectionString));
+                (options => options.UseNpgsql(connectionString));
+            // //Un comment if you want use sql server connection 
+            // //1-Remove files in Migrations Folder
+            // //2- open PackageManager Console
+            // //3-Run add-migration init_Db
+            // //4-Run update-database
+            //var connectionStringSql = configuration.GetConnectionString("EASTISql");
+            //services.AddDbContext<OrdersContext>
+            //     (options => options.UseSqlServer(connectionStringSql));
             services.AddScoped<DbContext, OrdersContext>();
         }
         private static void ServicesConfig(this IServiceCollection services)
