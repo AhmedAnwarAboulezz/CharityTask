@@ -1,6 +1,6 @@
 # CharityTask
 charity task to sell items
-# Description:
+## Description:
 It is popular home cafeteria event and a local charity is looking to have a bake sale and second hand
 outlet to raise funds for the ones in need. They have promised you a public recognition if you make
 software to help run the sale.
@@ -18,7 +18,7 @@ Pants – 3.00 €
 Jacket – 4.00 €
 Toy – 1.00 €
 Quantity of each second hand item in stock is inserted on the day of bake sale.
-# Business rules:
+## Business rules:
 Items for purchase are selected by clicking on picture of the product. Quantity equals amount of
 clicks on a product image.
 Remember, that there is multiple sales persons, who are using tablets or mobile phones!
