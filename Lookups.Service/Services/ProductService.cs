@@ -30,8 +30,26 @@ namespace Orders.Service.Services
         }
         public async Task<IEnumerable<ProductDto>> GetAllByProductType(int productType)
         {
-            var list = await UnitOfWork.GetRepository<Product>().FindAsync(a=>a.ProductTypeId == productType);
-            return Mapper.Map<IEnumerable<Product>, IEnumerable<ProductDto>>(list);
+            var list = await UnitOfWork.GetRepository<Product>().FindSelectAsync(a=>a.ProductTypeId == productType,
+                select: r=> SetRemainInStock(r),
+                include: source => source.Include(r=>r.OrderDetails));
+            return list;
+        }
+
+        private static ProductDto SetRemainInStock(Product item)
+        {
+            return new ProductDto()
+            {
+                Id = item.Id,
+                Code = item.Code,
+                AmountInStock = item.AmountInStock,
+                CreatedDate = item.CreatedDate,
+                NameFl = item.NameFl,
+                NameSl = item.NameSl,
+                Price = item.Price,
+                ProductTypeId = item.ProductTypeId,
+                RemainInStock = item.AmountInStock - item.OrderDetails.Sum(q => q.Amount)
+            };
         }
         public async Task<PagedListDto<ProductDto>> GetAllProductsPaged(ProductFilterDto filteringDto, PagingSortingDto pagingSortingDto)
         {

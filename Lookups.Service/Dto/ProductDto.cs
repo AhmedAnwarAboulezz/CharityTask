@@ -10,11 +10,10 @@ namespace Orders.Service.Dto
         public string NameSl { get; set; }
         public DateTime CreatedDate { get; set; }
         public float Price { get; set; }
-        public string Currency { get; set; }
         public int ProductTypeId { get; set; }
         public string ProductTypeName { get; set; }
         public int? AmountInStock { get; set; }
-        public int? RemainAmountInStock { get; set; }
+        public int? RemainInStock { get; set; }
     }
 
     public class ProductResetDto : BaseDto

@@ -14,7 +14,6 @@ namespace Orders.Data.Entities
         public string NameSl { get; set; }
         public float Price { get; set; }
         [StringLength(5)]
-        public string Currency { get; set; }
         public int ProductTypeId { get; set; }
         public virtual ProductType ProductType { get; set; }
         public int AmountInStock { get; set; }

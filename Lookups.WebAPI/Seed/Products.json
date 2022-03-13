@@ -5,8 +5,7 @@
     "Code": "SL-BR",
     "NameFl": "Brownie",
     "NameSl": "Brownie",
-    "Price": "65",
-    "Currency": "c",
+    "Price": "0.65",
     "ProductTypeId": "1",
     "AmountInStock": "48"
   },
@@ -16,7 +15,6 @@
     "NameFl": "Muffin",
     "NameSl": "Muffin",
     "Price": "1.00",
-    "Currency": "€",
     "ProductTypeId": "1",
     "AmountInStock": "36"
   },
@@ -26,7 +24,6 @@
     "NameFl": "Cake Pop",
     "NameSl": "Cake Pop",
     "Price": "1.35",
-    "Currency": "€",
     "ProductTypeId": "1",
     "AmountInStock": "24"
   },
@@ -36,7 +33,6 @@
     "NameFl": "Apple Tart",
     "NameSl": "Apple Tart",
     "Price": "1.50",
-    "Currency": "€",
     "ProductTypeId": "1",
     "AmountInStock": "60"
   },
@@ -46,7 +42,6 @@
     "NameFl": "Water",
     "NameSl": "Water",
     "Price": "1.50",
-    "Currency": "€",
     "ProductTypeId": "1",
     "AmountInStock": "30"
   },
@@ -58,7 +53,6 @@
     "NameFl": "Shirt",
     "NameSl": "Shirt",
     "Price": "2.00",
-    "Currency": "€",
     "ProductTypeId": "2",
     "AmountInStock": "0"
   },
@@ -68,7 +62,6 @@
     "NameFl": "Pants",
     "NameSl": "Pants",
     "Price": "3.00",
-    "Currency": "€",
     "ProductTypeId": "2",
     "AmountInStock": "0"
   },
@@ -78,7 +71,6 @@
     "NameFl": "Jacket",
     "NameSl": "Jacket",
     "Price": "4.00",
-    "Currency": "€",
     "ProductTypeId": "2",
     "AmountInStock": "0"
   },
@@ -88,7 +80,6 @@
     "NameFl": "Toy",
     "NameSl": "Toy",
     "Price": "1.00",
-    "Currency": "€",
     "ProductTypeId": "2",
     "AmountInStock": "0"
   }
