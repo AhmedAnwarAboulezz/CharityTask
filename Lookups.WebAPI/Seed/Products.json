@@ -22,7 +22,7 @@
     "Id": "10000000-0000-0000-0000-000000000003",
     "Code": "SL-CP",
     "NameFl": "Cake Pop",
-    "NameSl": "Cake Pop",
+    "NameSl": "Kook Pop",
     "Price": "1.35",
     "ProductTypeId": "1",
     "AmountInStock": "24"
@@ -31,7 +31,7 @@
     "Id": "10000000-0000-0000-0000-000000000004",
     "Code": "SL-AT",
     "NameFl": "Apple Tart",
-    "NameSl": "Apple Tart",
+    "NameSl": "Õunatort",
     "Price": "1.50",
     "ProductTypeId": "1",
     "AmountInStock": "60"
@@ -40,7 +40,7 @@
     "Id": "10000000-0000-0000-0000-000000000005",
     "Code": "SL-WR",
     "NameFl": "Water",
-    "NameSl": "Water",
+    "NameSl": "Vesi",
     "Price": "1.50",
     "ProductTypeId": "1",
     "AmountInStock": "30"
@@ -51,7 +51,7 @@
     "Id": "20000000-0000-0000-0000-000000000001",
     "Code": "DN-ST",
     "NameFl": "Shirt",
-    "NameSl": "Shirt",
+    "NameSl": "Särk",
     "Price": "2.00",
     "ProductTypeId": "2",
     "AmountInStock": "0"
@@ -60,7 +60,7 @@
     "Id": "20000000-0000-0000-0000-000000000002",
     "Code": "DN-PN",
     "NameFl": "Pants",
-    "NameSl": "Pants",
+    "NameSl": "Püksid",
     "Price": "3.00",
     "ProductTypeId": "2",
     "AmountInStock": "0"
@@ -69,7 +69,7 @@
     "Id": "20000000-0000-0000-0000-000000000003",
     "Code": "DN-JK",
     "NameFl": "Jacket",
-    "NameSl": "Jacket",
+    "NameSl": "Jope",
     "Price": "4.00",
     "ProductTypeId": "2",
     "AmountInStock": "0"
@@ -78,7 +78,7 @@
     "Id": "20000000-0000-0000-0000-000000000004",
     "Code": "DN-TY",
     "NameFl": "Toy",
-    "NameSl": "Toy",
+    "NameSl": "Mänguasi",
     "Price": "1.00",
     "ProductTypeId": "2",
     "AmountInStock": "0"
