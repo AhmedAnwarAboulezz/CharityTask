@@ -117,121 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CannotDelete" xml:space="preserve">
-    <value>تغذر حذف هذا الحقل</value>
-  </data>
-  <data name="DateGreaterThan" xml:space="preserve">
-    <value>تاريخ البداية يجب ان يكون اقل من او يساوي تاريخ النهاية</value>
-  </data>
-  <data name="DateInEmployeeHiringPeriod" xml:space="preserve">
-    <value>تاريخ البداية يجب ان يكون داخل فترة تعين الموظف</value>
-  </data>
   <data name="Delete" xml:space="preserve">
     <value>تم الحذف</value>
   </data>
-  <data name="EndDataBEforeStartDate" xml:space="preserve">
-    <value>تاريخ بداية الفترة يجب ان يكون قبل تاريخ نهاية الفترة</value>
-  </data>
-  <data name="EndDateRequired" xml:space="preserve">
-    <value>تاريخ النهاية مطلوب</value>
-  </data>
-  <data name="LastStartDate" xml:space="preserve">
-    <value>تاريخ البداية يجب ان يكون اكبر من تاريخ بداية اخر عملية</value>
-  </data>
-  <data name="OperationExists" xml:space="preserve">
-    <value>البيانات موجودة بالفعل</value>
-  </data>
   <data name="required" xml:space="preserve">
     <value>حقل مطلوب</value>
-  </data>
-  <data name="SDateAndEndDateOverlapWithAnother" xml:space="preserve">
-    <value>هذه الفترة محجوزة مسبقا او تحتوي على ايام في فترة اخرى</value>
   </data>
   <data name="Success" xml:space="preserve">
     <value>تم الحفظ بنجاح</value>
   </data>
   <data name="Updated" xml:space="preserve">
     <value>تم التعديل</value>
-  </data>
-  <data name="AdminLeveldoesnotexist" xml:space="preserve">
-    <value>الموقع غير موجود</value>
-  </data>
-  <data name="Locationdoesnotexist" xml:space="preserve">
-    <value>هذه الإدارة غير موجودة</value>
-  </data>
-  <data name="TimeGreaterThan" xml:space="preserve">
-    <value>وقت البداية يجب ان يكون اقل من او يساوي وقت النهاية</value>
-  </data>
-  <data name="AssignToDailyRotatedScheduleBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى شاشة( جدول الدوامات اليومية) اولا</value>
-  </data>
-  <data name="AssignToEmergencyAllowanceBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى شاشة( الإعفائات الطارئة) اولا</value>
-  </data>
-  <data name="AssignToEmployeeAllowanceBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى   شاشة( إعفاءات الموظفين) اولا</value>
-  </data>
-  <data name="AssignToEmployeeBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف  الموظف اولا</value>
-  </data>
-  <data name="AssignToEmployeeDutyBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى   شاشة( دوامات الموظفين) اولا</value>
-  </data>
-  <data name="AssignToEmployeeFixedDutyPeriodBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى   شاشة( دوامات ثابتة فترات ) اولا</value>
-  </data>
-  <data name="AssignToEmployeeFullDayPermissionBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف في شاشة تصريحات يوم كامل) اولا</value>
-  </data>
-  <data name="AssignToEmployeeLeaveBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى   شاشة( أجازات الموظفين) اولا</value>
-  </data>
-  <data name="AssignToEmployeePermissionBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى   شاشة( التصريحات الجزئية للموظفين) اولا</value>
-  </data>
-  <data name="AssignToHolidayDateBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف في شاشة( تواريخ العطلات) اولا</value>
-  </data>
-  <data name="AssignToLateRegulationBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف في شاشة( حساب خصم التأخيرات) اولا</value>
-  </data>
-  <data name="AssignToLeaveRegulationBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف فى شاشة( لائحة الأجازات) اولا</value>
-  </data>
-  <data name="AssignToLocationBefore" xml:space="preserve">
-    <value>من فضلك قم بحذف الموقع  اولا</value>
-  </data>
-  <data name="AssignToOverTimeOrderBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف في (شاشة تعيين وقت إضافي) اولا</value>
-  </data>
-  <data name="AssignToPartialPermissionTypeBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف  في شاشة( التصريحات الجزئية) اولا</value>
-  </data>
-  <data name="AssignToPreviousLeavesBalanceBefore" xml:space="preserve">
-    <value>من فضلك قم بالحذف في شاشة( أرصدة أجازات سابق) اولا</value>
-  </data>
-  <data name="AssignToTeamBefore" xml:space="preserve">
-    <value>من فضلك قم بحذف  ( الفريق ) اولا</value>
-  </data>
-  <data name="AssignToUserBefore" xml:space="preserve">
-    <value>من فضلك قم بحذف( المستخدم) اولا</value>
-  </data>
-  <data name="AssignToUserInqueryBefore" xml:space="preserve">
-    <value>من فضلك قم بحذف المستخدم من شاشة ( مستخدمى الاستعلامات ) اولا</value>
-  </data>
-  <data name="PreviousLeavesBalanceIsExists" xml:space="preserve">
-    <value>البيانات موجودة مسبقا</value>
-  </data>
-  <data name="StartDtaeMustBeGreterThanthePreviousOperation" xml:space="preserve">
-    <value>تاريخ البداية يجب ان يكون اكبر من تاريخ اخر عملية</value>
-  </data>
-  <data name="DaysAtLeast" xml:space="preserve">
-    <value>أيام على الأقل</value>
-  </data>
-  <data name="RequestShouldAppliedBefore" xml:space="preserve">
-    <value>الطلب يجب أن يقدم قبل </value>
-  </data>
-  <data name="RestDayandWeekendDayShouldnotbethesameDays" xml:space="preserve">
-    <value>يوم الاجازه ويوم الراحه  يجب ان يكونوا مختلفين</value>
   </data>
 </root>

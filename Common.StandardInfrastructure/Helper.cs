@@ -227,81 +227,75 @@ namespace Common.StandardInfrastructure
         {
             return PredicateBuilder.New<T>(q => q.DayOfWork.Date <= endDate.Date && startDate.Date <= q.DayOfWork.Date);
         }
-        public static int ChangeProperty()
-        {
-            ISessionStorage session = new SessionStorage();
-            if (session?.PrimaryLanguage == null) return (int)ChangePropertyEnum.EnAr;
-            if (string.IsNullOrWhiteSpace(session?.SecondaryLanguage))
-            {
-                return session?.PrimaryLanguage == "ar" ? (int)ChangePropertyEnum.Ar : (int)ChangePropertyEnum.En;
-            }
-            return session?.PrimaryLanguage == "ar" ? (int)ChangePropertyEnum.Ar : (int)ChangePropertyEnum.EnAr;
-        }
-        public enum ChangePropertyEnum
-        {
-            ArEn = 1,
-            EnAr = 2,
-            Ar = 3,
-            En = 4
-        }
-        public static IEnumerable<string> GetMacAddress(string code) => NetworkInterface.GetAllNetworkInterfaces().Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback).Select(nic => (code + nic.GetPhysicalAddress()).Encrypt());
-        public static IEnumerable<string> GetProcessor(string code)
-        {
-            var managementObjectSearcherList = new ManagementObjectSearcher("select * from Win32_Processor");
-            foreach (var managementObjectSearcher in managementObjectSearcherList.Get()) yield return (code + managementObjectSearcher["ProcessorId"]).Encrypt();
-        }
-        public static IEnumerable<string> GetMotherBoard(string code)
-        {
-            var managementObjectSearcherList = new ManagementObjectSearcher("SELECT * FROM Win32_BaseBoard");
-            foreach (var managementObjectSearcher in managementObjectSearcherList.Get()) yield return (code + managementObjectSearcher["SerialNumber"]).Encrypt();
-        }
+        //public static int ChangeProperty()
+        //{
+        //    ISessionStorage session = new SessionStorage();
+        //    if (session?.PrimaryLanguage == null) return (int)ChangePropertyEnum.EnAr;
+        //    if (string.IsNullOrWhiteSpace(session?.SecondaryLanguage))
+        //    {
+        //        return session?.PrimaryLanguage == "ar" ? (int)ChangePropertyEnum.Ar : (int)ChangePropertyEnum.En;
+        //    }
+        //    return session?.PrimaryLanguage == "ar" ? (int)ChangePropertyEnum.Ar : (int)ChangePropertyEnum.EnAr;
+        //}
+        //public enum ChangePropertyEnum
+        //{
+        //    ArEn = 1,
+        //    EnAr = 2,
+        //    Ar = 3,
+        //    En = 4
+        //}
+        //public static IEnumerable<string> GetMacAddress(string code) => NetworkInterface.GetAllNetworkInterfaces().Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback).Select(nic => (code + nic.GetPhysicalAddress()).Encrypt());
+        //public static IEnumerable<string> GetProcessor(string code)
+        //{
+        //    var managementObjectSearcherList = new ManagementObjectSearcher("select * from Win32_Processor");
+        //    foreach (var managementObjectSearcher in managementObjectSearcherList.Get()) yield return (code + managementObjectSearcher["ProcessorId"]).Encrypt();
+        //}
+        //public static IEnumerable<string> GetMotherBoard(string code)
+        //{
+        //    var managementObjectSearcherList = new ManagementObjectSearcher("SELECT * FROM Win32_BaseBoard");
+        //    foreach (var managementObjectSearcher in managementObjectSearcherList.Get()) yield return (code + managementObjectSearcher["SerialNumber"]).Encrypt();
+        //}
 
-        public static List<string> GetChangedProperties<T>(T A, T B)
-        {
-            var result = new List<string>();
-            if (A != null && B != null)
-            {
-                var type = typeof(T);
-                var exclude = new string[] { "ModifiedDate", "OrganizationId", "ModifiedBy", "CreatedDate", "CreatedBy", "IsDelete", "Employee", "Parent", "Childerns", "AdmPath", "Id" };
-                var allProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
-                var list = allProperties.ToList();
-                list.ForEach(pi =>
-                {
-                    var AValue = type.GetProperty(pi.Name).GetValue(A, null);
-                    var BValue = type.GetProperty(pi.Name).GetValue(B, null);
-                    if (AValue != BValue && (AValue == null || !AValue.Equals(BValue)) && !exclude.Contains(pi.Name) && !pi.Name.Contains(type.Name.ToString()))
-                    {
-                        if (BValue != null && (!BValue.GetType().IsClass || BValue.GetType() == typeof(string)))
-                        {
-                            result.Add(pi.Name);
+        //public static List<string> GetChangedProperties<T>(T A, T B)
+        //{
+        //    var result = new List<string>();
+        //    if (A != null && B != null)
+        //    {
+        //        var type = typeof(T);
+        //        var exclude = new string[] { "ModifiedDate", "OrganizationId", "ModifiedBy", "CreatedDate", "CreatedBy", "IsDelete", "Employee", "Parent", "Childerns", "AdmPath", "Id" };
+        //        var allProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+        //        var list = allProperties.ToList();
+        //        list.ForEach(pi =>
+        //        {
+        //            var AValue = type.GetProperty(pi.Name).GetValue(A, null);
+        //            var BValue = type.GetProperty(pi.Name).GetValue(B, null);
+        //            if (AValue != BValue && (AValue == null || !AValue.Equals(BValue)) && !exclude.Contains(pi.Name) && !pi.Name.Contains(type.Name.ToString()))
+        //            {
+        //                if (BValue != null && (!BValue.GetType().IsClass || BValue.GetType() == typeof(string)))
+        //                {
+        //                    result.Add(pi.Name);
 
-                        }
-                        else if (AValue != null && (!AValue.GetType().IsClass || AValue.GetType() == typeof(string)))
-                        {
-                            result.Add(pi.Name);
-                        }
-                    }
-                });
-            }
-            return result;
-        }
+        //                }
+        //                else if (AValue != null && (!AValue.GetType().IsClass || AValue.GetType() == typeof(string)))
+        //                {
+        //                    result.Add(pi.Name);
+        //                }
+        //            }
+        //        });
+        //    }
+        //    return result;
+        //}
         public static T EditOriginalValues<T>(T entityNew, T entityOld)
         {
             try
             {
-                const string createdByString = "CreatedBy";
                 const string createdDateString = "CreatedDate";
                 var createdByOldValue = Guid.Empty;
                 DateTime createdDateOldValue = default;
                 var oldType = entityOld.GetType();
-                var createdByOld = oldType.GetProperty(createdByString);
-                if (createdByOld != null) createdByOldValue = Guid.Parse(createdByOld.GetValue(entityOld, null).ToString());
                 var createdDateOld = oldType.GetProperty(createdDateString);
                 if (createdDateOld != null) createdDateOldValue = DateTime.Parse(oldType.GetProperty(createdDateString)?.GetValue(entityOld, null).ToString());
-
                 var newType = entityNew.GetType();
-                var createdBy = newType.GetProperty(createdByString);
-                if (createdBy != null) createdBy.SetValue(entityNew, Convert.ChangeType(createdByOldValue, createdBy.PropertyType), null);
                 var createdDate = newType.GetProperty(createdDateString);
                 if (createdDate != null) createdDate.SetValue(entityNew, Convert.ChangeType(createdDateOldValue, createdDate.PropertyType), null);
             }
@@ -326,13 +320,8 @@ namespace Common.StandardInfrastructure
                     new Claim(JwtRegisteredClaimNames.Sub, "superadmin"),
                     new Claim("UserName", "superadmin"),
                     new Claim("UserId", "b31871ee-4e10-4d5a-9193-a1272b51b3be"),
-                    new Claim("EmployeeId", Guid.Empty.ToString()),
-                    new Claim("OrganizationId", organizationId==null?"":organizationId.ToString()),
                     new Claim("PrimaryLanguage", ""),
                     new Claim("SecondaryLanguage", ""),
-                    new Claim("LocationId", ""),
-                    new Claim("IsSuperAdmin", "true"),
-                    new Claim("IsMobile", "false"),
                     new Claim("Roles", "superadmin")
                 },
                 expires: DateTime.Now.AddMinutes(45),

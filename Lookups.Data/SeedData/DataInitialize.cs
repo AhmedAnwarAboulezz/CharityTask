@@ -25,9 +25,10 @@ namespace Orders.Data.SeedData
 
         public IEnumerable<Product> AddProducts()
         {
-            var dataText = System.IO.File.ReadAllText(@"seed/Products.json");
-            var data = Seeder<IEnumerable<Product>>.Seedit(dataText).Select(SetRemainAmountInStock);
-            return data;
+            //var dataText = System.IO.File.ReadAllText(@"seed/Products.json");
+            //var data = Seeder<IEnumerable<Product>>.Seedit(dataText).Select(SetRemainAmountInStock);
+            //return data;
+            return new List<Product>();
         }
         private Product SetRemainAmountInStock(Product product)
         {

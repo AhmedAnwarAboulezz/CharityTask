@@ -19,47 +19,7 @@ namespace Common.StandardInfrastructure
         Donated = 2
     }
 
-    public enum GenderEnum
-    {
-        [EnumGuid("1160f693-bef5-e011-a485-80ee7300c611")]
-        [EnumStringNameValue("Male", "ذكر")]
-        Male,
-        [EnumGuid("5160f693-bef5-e011-a485-80ee7300c612")]
-        [EnumStringNameValue("Female", "أنثي")]
-        Female,
-        [EnumGuid("2260f693-bef5-e011-a485-80ee7300c693")]
-        [EnumStringNameValue("Both", "كلاهما")]
-        Both
-    }
 
-
-
-
-
-    public enum ActionTypeEnum
-    {
-        [EnumGuid("10000000-1000-1000-1000-100000000000")]
-        [EnumStringNameValue("Opened", "مفتوح")]
-        Open,
-        [EnumGuid("20000000-2000-2000-2000-200000000000")]
-        [EnumStringNameValue("Closed", "مغلق")]
-        Closed,
-    }
-
-    
-    // Enums For Expression generator
-    public enum OperationExpressionEnum
-    {
-        EqualTo,
-        NotEqualTo,
-    }
-    public enum SelectorsEnum
-    {
-        And = 1,
-        Or = 2,
-        NotNullAnd = 3,
-        NotNullOr = 4
-    }
     // Helper for Enum Guid
     class EnumGuid : Attribute
     {
@@ -70,34 +30,18 @@ namespace Common.StandardInfrastructure
             Guid = new Guid(guid);
         }
     }
-    class EnumStringNotificationValue
-    {
-        public string OldUrl;
-        public string NewUrl;
-        public EnumStringNotificationValue(string oldUrl, string newUrl)
-        {
-            this.OldUrl = oldUrl;
-            this.NewUrl = newUrl;
-        }
-    }
+
     class EnumStringNameValue : Attribute
     {
         public string NameFl;
         public string NameSl;
-        public bool CanShow;
-        public bool CanShowMobile;
+
         public EnumStringNameValue(string nameFl, string nameSl)
         {
             this.NameFl = nameFl;
             this.NameSl = nameSl;
         }
-        public EnumStringNameValue(string nameFl, string nameSl, bool canShow, bool canShowMobile)
-        {
-            this.NameFl = nameFl;
-            this.NameSl = nameSl;
-            this.CanShow = canShow;
-            this.CanShowMobile = canShowMobile;
-        }
+
     }
     public static class EnumExtensionsClass
     {
@@ -133,9 +77,6 @@ namespace Common.StandardInfrastructure
                        attributes.NameFl,
                        attributes.NameSl
                     };
-                    if (attributes?.CanShow != null) list.Add(attributes?.CanShow.ToString());
-                    if (attributes?.CanShowMobile != null) list.Add(attributes?.CanShow.ToString());
-
                     return list;
                 }
             }
@@ -158,12 +99,9 @@ namespace Common.StandardInfrastructure
                     var attributes = (EnumStringNameValue)attrs[0];
                     var list = new List<string>
                     {
-                        Helper.ChangeProperty()==(int)Helper.ChangePropertyEnum.Ar || Helper.ChangeProperty()==(int)Helper.ChangePropertyEnum.ArEn ? attributes.NameSl : attributes.NameFl,
-                         Helper.ChangeProperty()==(int)Helper.ChangePropertyEnum.En || Helper.ChangeProperty()==(int)Helper.ChangePropertyEnum.ArEn ? attributes.NameFl : attributes.NameSl
+                        attributes.NameFl,
+                        attributes.NameSl
                     };
-                    if (attributes?.CanShow != null) list.Add(attributes?.CanShow.ToString());
-                    if (attributes?.CanShowMobile != null) list.Add(attributes?.CanShow.ToString());
-
                     return list;
                 }
             }

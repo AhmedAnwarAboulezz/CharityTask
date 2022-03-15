@@ -48,7 +48,7 @@ namespace Common.StandardInfrastructure.Resources {
         
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
-        ///   resource orders using this strongly typed resource class.
+        ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         public static global::System.Globalization.CultureInfo Culture {
@@ -57,222 +57,6 @@ namespace Common.StandardInfrastructure.Resources {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Admin level does not exist.
-        /// </summary>
-        public static string AdminLeveldoesnotexist {
-            get {
-                return ResourceManager.GetString("AdminLeveldoesnotexist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Daily Rotated Schedule ) First..
-        /// </summary>
-        public static string AssignToDailyRotatedScheduleBefore {
-            get {
-                return ResourceManager.GetString("AssignToDailyRotatedScheduleBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Emergency Allowance ) First..
-        /// </summary>
-        public static string AssignToEmergencyAllowanceBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmergencyAllowanceBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Allowance ) First..
-        /// </summary>
-        public static string AssignToEmployeeAllowanceBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeAllowanceBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee ) First..
-        /// </summary>
-        public static string AssignToEmployeeBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Duty ) First..
-        /// </summary>
-        public static string AssignToEmployeeDutyBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeDutyBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Fixed Duty Period ) First..
-        /// </summary>
-        public static string AssignToEmployeeFixedDutyPeriodBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeFixedDutyPeriodBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Full Day Permission ) First..
-        /// </summary>
-        public static string AssignToEmployeeFullDayPermissionBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeFullDayPermissionBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Leave ) First..
-        /// </summary>
-        public static string AssignToEmployeeLeaveBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeeLeaveBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Employee Permission ) First..
-        /// </summary>
-        public static string AssignToEmployeePermissionBefore {
-            get {
-                return ResourceManager.GetString("AssignToEmployeePermissionBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Holiday Date ) First..
-        /// </summary>
-        public static string AssignToHolidayDateBefore {
-            get {
-                return ResourceManager.GetString("AssignToHolidayDateBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Late Regulation ) First..
-        /// </summary>
-        public static string AssignToLateRegulationBefore {
-            get {
-                return ResourceManager.GetString("AssignToLateRegulationBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Leave Regulation ) First..
-        /// </summary>
-        public static string AssignToLeaveRegulationBefore {
-            get {
-                return ResourceManager.GetString("AssignToLeaveRegulationBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Location ) First..
-        /// </summary>
-        public static string AssignToLocationBefore {
-            get {
-                return ResourceManager.GetString("AssignToLocationBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( OverTime Order ) First..
-        /// </summary>
-        public static string AssignToOverTimeOrderBefore {
-            get {
-                return ResourceManager.GetString("AssignToOverTimeOrderBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Partial Permission Type ) First..
-        /// </summary>
-        public static string AssignToPartialPermissionTypeBefore {
-            get {
-                return ResourceManager.GetString("AssignToPartialPermissionTypeBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Previous Leaves Balance ) First..
-        /// </summary>
-        public static string AssignToPreviousLeavesBalanceBefore {
-            get {
-                return ResourceManager.GetString("AssignToPreviousLeavesBalanceBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( Team ) First..
-        /// </summary>
-        public static string AssignToTeamBefore {
-            get {
-                return ResourceManager.GetString("AssignToTeamBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( User ) First..
-        /// </summary>
-        public static string AssignToUserBefore {
-            get {
-                return ResourceManager.GetString("AssignToUserBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please, Delete ( User Inquery ) First..
-        /// </summary>
-        public static string AssignToUserInqueryBefore {
-            get {
-                return ResourceManager.GetString("AssignToUserInqueryBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Filed can&apos;t be removed.
-        /// </summary>
-        public static string CannotDelete {
-            get {
-                return ResourceManager.GetString("CannotDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start date must be less than or equal end date..
-        /// </summary>
-        public static string DateGreaterThan {
-            get {
-                return ResourceManager.GetString("DateGreaterThan", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start date must be during employee hiring period..
-        /// </summary>
-        public static string DateInEmployeeHiringPeriod {
-            get {
-                return ResourceManager.GetString("DateInEmployeeHiringPeriod", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Days At Least.
-        /// </summary>
-        public static string DaysAtLeast {
-            get {
-                return ResourceManager.GetString("DaysAtLeast", resourceCulture);
             }
         }
         
@@ -286,47 +70,11 @@ namespace Common.StandardInfrastructure.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Date Must be less than or equal End Date.
-        /// </summary>
-        public static string EndDataBEforeStartDate {
-            get {
-                return ResourceManager.GetString("EndDataBEforeStartDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to End date is required.
-        /// </summary>
-        public static string EndDateRequired {
-            get {
-                return ResourceManager.GetString("EndDateRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Error happend .
         /// </summary>
         public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start Date must be greater than start date for last operation..
-        /// </summary>
-        public static string LastStartDate {
-            get {
-                return ResourceManager.GetString("LastStartDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Location does not exist.
-        /// </summary>
-        public static string Locationdoesnotexist {
-            get {
-                return ResourceManager.GetString("Locationdoesnotexist", resourceCulture);
             }
         }
         
@@ -340,24 +88,6 @@ namespace Common.StandardInfrastructure.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Leaves Balance Is Exists.
-        /// </summary>
-        public static string PreviousLeavesBalanceIsExists {
-            get {
-                return ResourceManager.GetString("PreviousLeavesBalanceIsExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Request should be applied before.
-        /// </summary>
-        public static string RequestShouldAppliedBefore {
-            get {
-                return ResourceManager.GetString("RequestShouldAppliedBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Field Required.
         /// </summary>
         public static string required {
@@ -367,47 +97,11 @@ namespace Common.StandardInfrastructure.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RestDay and WeekendDay  Should not be the same Days.
-        /// </summary>
-        public static string RestDayandWeekendDayShouldnotbethesameDays {
-            get {
-                return ResourceManager.GetString("RestDayandWeekendDayShouldnotbethesameDays", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date Duration Has Overlap With Another Record.
-        /// </summary>
-        public static string SDateAndEndDateOverlapWithAnother {
-            get {
-                return ResourceManager.GetString("SDateAndEndDateOverlapWithAnother", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start Date must be greater than date for last operation..
-        /// </summary>
-        public static string StartDtaeMustBeGreterThanthePreviousOperation {
-            get {
-                return ResourceManager.GetString("StartDtaeMustBeGreterThanthePreviousOperation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Data save successfully.
         /// </summary>
         public static string Success {
             get {
                 return ResourceManager.GetString("Success", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start time must be less than or equal end time..
-        /// </summary>
-        public static string TimeGreaterThan {
-            get {
-                return ResourceManager.GetString("TimeGreaterThan", resourceCulture);
             }
         }
         
