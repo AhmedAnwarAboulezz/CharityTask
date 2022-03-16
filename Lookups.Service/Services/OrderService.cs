@@ -31,29 +31,38 @@ namespace Orders.Service.Services
             var order = await UnitOfWork.GetRepository<Order>().GetAsync(id);
             return Mapper.Map<Order, OrderDto>(order);
         }
-
         private async Task<string> ValidateAmountInStockAsync(List<OrderDetailDto> orderDetails)
         {
+            var oldProducts = await GetOldProducts(orderDetails);
+            return CheckOutOfStockMessage(orderDetails, oldProducts);
+        }
+        public string CheckOutOfStockMessage(List<OrderDetailDto> orderDetails, List<ProductDetailDto> oldProducts)
+        {
             var result = new StringBuilder();
-            var productIds = orderDetails.Select(a => a.ProductId).ToList();
-            var oldProducts = (await UnitOfWork.GetRepository<Product>().FindSelectAsync(a => productIds.Contains(a.Id), 
-                select: a=> new ProductDetailDto()
-                {
-                    ProductId= a.Id,
-                    ProductCode= a.Code,
-                    RemainAmount = a.AmountInStock - a.OrderDetails.Sum(q => q.Amount)
-                }
-                , include: source => source.Include(r => r.OrderDetails)));
             orderDetails.ForEach(item =>
             {
                 var prodItem = oldProducts.FirstOrDefault(a => a.ProductId == item.ProductId);
-                if(prodItem != null && item.Amount > prodItem.RemainAmount)
+                if (prodItem != null && item.Amount > prodItem.RemainAmount)
                 {
                     result.AppendLine($"product code {prodItem.ProductCode} have only {prodItem.RemainAmount} items in stock.");
                 }
             });
             return result.ToString();
         }
+        private async Task<List<ProductDetailDto>> GetOldProducts(List<OrderDetailDto> orderDetails)
+        {
+            var productIds = orderDetails.Select(a => a.ProductId).ToList();
+            var oldProducts = (await UnitOfWork.GetRepository<Product>().FindSelectAsync(a => productIds.Contains(a.Id),
+                select: a => new ProductDetailDto()
+                {
+                    ProductId = a.Id,
+                    ProductCode = a.Code,
+                    RemainAmount = a.AmountInStock - a.OrderDetails.Sum(q => q.Amount)
+                }
+                , include: source => source.Include(r => r.OrderDetails)));
+            return oldProducts.ToList();
+        }
+
         public async Task<string> AddCheckout(OrderDto orderDto)
         {
             var validateAmount = await ValidateAmountInStockAsync(orderDto.OrderDetails);

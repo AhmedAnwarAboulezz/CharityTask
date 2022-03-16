@@ -36,7 +36,7 @@ namespace Orders.Service.Services
             return list;
         }
 
-        private static ProductDto SetRemainInStock(Product item)
+        public ProductDto SetRemainInStock(Product item)
         {
             return new ProductDto()
             {
