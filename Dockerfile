@@ -9,6 +9,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
+COPY ["Orders.Test/Orders.Test.csproj", "Orders.Test/"]
 COPY ["Lookups.WebAPI/Orders.WebAPI.csproj", "Lookups.WebAPI/"]
 COPY ["Lookups.Service/Orders.Service.csproj", "Lookups.Service/"]
 COPY ["Lookups.DataAccess/Orders.DataAccess.csproj", "Lookups.DataAccess/"]
