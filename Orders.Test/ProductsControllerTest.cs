@@ -26,7 +26,6 @@ namespace Orders.Test
         }
 
         [Fact]
-        //naming convention MethodName_expectedBehavior_StateUnderTest
         public void GetAll_ListOfProductDto_ProductExistsInRepo()
         {
             //arrange
@@ -39,6 +38,52 @@ namespace Orders.Test
             //assert
             Assert.IsType<OkObjectResult>(result);
             Assert.Equal(GetSampleProducts().Count(), actual.Count());
+        }
+
+        [Fact]
+        public void GetAllByProductType_ListOfProductDto_ProductExistsByTypeInRepo()
+        {
+            //arrange
+            iproductService.Setup(x => x.GetAllByProductType(1).Result).Returns(GetSampleProducts);
+            iproductService.Setup(x => x.GetAllByProductType(2).Result).Returns(GetSampleProducts);
+            var controller = new ProductsController(iproductService.Object);
+            //act
+            var actionResult = controller.GetAllByProductType(1).Result;
+            var result = actionResult as OkObjectResult;
+            var actual = result.Value as List<ProductDto>;
+
+            var actionResult2 = controller.GetAllByProductType(2).Result;
+            var result2 = actionResult as OkObjectResult;
+            var actual2 = result.Value as List<ProductDto>;
+            //assert
+            Assert.IsType<OkObjectResult>(result);
+            Assert.Equal(GetSampleProducts().Count(), actual.Count());
+            Assert.IsType<OkObjectResult>(result2);
+            Assert.Equal(GetSampleProducts().Count(), actual2.Count());
+
+        }
+
+        [Fact]
+        public void GetAllByProductType_ListOfProductDto_ProductDoesnetExistsByTypeInRepo()
+        {
+            //arrange
+            iproductService.Setup(x => x.GetAllByProductType(3).Result).Returns(new List<ProductDto>());
+            iproductService.Setup(x => x.GetAllByProductType(0).Result).Returns(new List<ProductDto>());
+            var controller = new ProductsController(iproductService.Object);
+            //act
+            var actionResult = controller.GetAllByProductType(3).Result;
+            var result = actionResult as OkObjectResult;
+            var actual = result.Value as List<ProductDto>;
+
+            var actionResult2 = controller.GetAllByProductType(0).Result;
+            var result2 = actionResult as OkObjectResult;
+            var actual2 = result.Value as List<ProductDto>;
+            //assert
+            Assert.IsType<OkObjectResult>(result);
+            Assert.Equal(0, actual.Count());
+            Assert.IsType<OkObjectResult>(result2);
+            Assert.Equal(0, actual2.Count());
+
         }
         private List<ProductDto> GetSampleProducts()
         {
