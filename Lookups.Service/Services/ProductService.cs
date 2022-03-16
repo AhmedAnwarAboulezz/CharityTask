@@ -30,9 +30,8 @@ namespace Orders.Service.Services
         }
         public async Task<IEnumerable<ProductDto>> GetAllByProductType(int productType)
         {
-            var list = await UnitOfWork.GetRepository<Product>().FindSelectAsync(a=>a.ProductTypeId == productType,
-                select: r=> SetRemainInStock(r),
-                include: source => source.Include(r=>r.OrderDetails));
+            var list = (await UnitOfWork.GetRepository<Product>().FindAsync(a => a.ProductTypeId == productType,
+                     include: source => source.Include(r => r.OrderDetails))).Select(r=> SetRemainInStock(r));
             return list;
         }
 
